@@ -12,17 +12,17 @@ Example Architecture + Structure
 .
 +
 |
-+-+ cmd
++-+ cmd/
 |
-+-+ config
++-+ config/
 |
-+-+ db
++-+ db/
 |
-+-+ http
++-+ http/
 |
-+-+ router
++-+ router/
 |
-+-+ [domain]
++-+ [domain]/
 |
 +
 ...
