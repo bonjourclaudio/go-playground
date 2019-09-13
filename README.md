@@ -50,3 +50,8 @@ Every domain should have it's own folder containing the following structure:
 - model.go
 - routes.go
 - handlers.go
+
+---
+
+## Ressources
+[Gorm Doc](https://gorm.io/docs/index.html)
