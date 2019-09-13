@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-// Get One Author By ID
+// Get All Authors
 func GetAuthorsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var authors []Author
@@ -16,13 +16,16 @@ func GetAuthorsHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(authors)
 }
 
-// Get all Authors
+// Get Author By ID
 func GetAuthorHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
 	var author Author
-	db.DB.First(&author, params["authorId"])
-	json.NewEncoder(w).Encode(author)
+	if db.DB.Where("id = ?", params["authorId"]).First(&author).RecordNotFound() {
+		customHTTP.NewErrorResponse(w, http.StatusNotFound, "No Author with ID: " + params["authorId"])
+	} else {
+		json.NewEncoder(w).Encode(author)
+	}
 }
 
 // Create Author
@@ -36,6 +39,7 @@ func CreateAuthorHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	json.NewEncoder(w).Encode(&author)
+	customHTTP.NewSuccessResponse(w, http.StatusOK, "Successfully created new Author")
 }
 
 // Delete Author
@@ -43,6 +47,12 @@ func DeleteAuthorHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
 	var author Author
-	db.DB.Delete(&author, params["authorId"])
-	w.Write([]byte("Successfully deleted Author with ID: " + params["authorId"]))
+
+	if db.DB.Where("id = ?", params["authorId"]).First(&author).RecordNotFound() {
+		customHTTP.NewErrorResponse(w, http.StatusNotFound, "No Author with ID: " + params["authorId"])
+	} else {
+		db.DB.Delete(&author, params["authorId"])
+		customHTTP.NewSuccessResponse(w, http.StatusOK, "Successfully deleted Author with ID: " + params["authorId"])
+	}
+
 }
