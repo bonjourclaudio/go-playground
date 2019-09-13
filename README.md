@@ -6,7 +6,7 @@ Example Architecture + Structure
 
 ---
 
-## Structure
+## Structure / Architecture
 
 <pre>
 .
