@@ -4,13 +4,25 @@ Simple REST API using Go Lang + Gorm + Mux
 
 Example Architecture + Structure
 
+## Requirements
+
+- [Go](https://golang.org/)
+- [Dep](https://github.com/golang/dep)
+- [Docker](https://www.docker.com/)
+
 ---
 
 ## Run the proj
 
 1. Start Docker-Service DB: `docker-compose up`
-2. Run Application: `go run cmd/main.go`
+2. Get Project's Dependencies: `dep ensure`
+3. Run Application: `go run cmd/main.go`
 
+## Build the proj
+
+1. Test & Build: `make`
+2. Only build: `make build`
+3. Build & Run: `make run`
 
 ---
 
