@@ -7,11 +7,11 @@
     BINARY_NAME=gorm-rest-api
     BINARY_UNIX=$(BINARY_NAME)_unix
 
-    all: test build
+    all: build
     build:
 	$(GOBUILD) -o ./bin/$(BINARY_NAME) -v ./cmd/...
-    test:
-	$(GOTEST) -v ./...
+    #test:
+	#$(GOTEST) -v ./...
     clean:
 	$(GOCLEAN)
 	rm -f $(BINARY_NAME)
@@ -19,6 +19,11 @@
     run:
 	$(GOBUILD) -o ./bin/$(BINARY_NAME) -v ./cmd/...
 	./bin/$(BINARY_NAME)
+	deps:
+	$(GOGET) github.com/spf13/viper
+	$(GOGET) github.com/gorilla/mux
+	$(GOGET) github.com/jinzhu/gorm
+	$(GOGET) github.com/jinzhu/gorm/dialects/mysql
 
 
 # Cross compilation
