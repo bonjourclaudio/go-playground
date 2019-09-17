@@ -26,6 +26,7 @@ Example Architecture + Structure
 1. Test & Build: `make`
 2. Only build: `make build`
 3. Build & Run: `make run`
+4. Server listens on port 8080
 
 ---
 
