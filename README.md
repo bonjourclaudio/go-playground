@@ -8,8 +8,8 @@ Example Architecture + Structure
 
 ## Run the proj
 
-1. `docker-compose up`
-2. `go run cmd/main.go`
+1. Start Docker-Service DB: `docker-compose up`
+2. Run Application: `go run cmd/main.go`
 
 
 ---
