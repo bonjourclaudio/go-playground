@@ -9,6 +9,7 @@ Example Architecture + Structure
 - [Go](https://golang.org/)
 - [Dep](https://github.com/golang/dep)
 - [Docker](https://www.docker.com/)
+- (For Windows only: [make](http://gnuwin32.sourceforge.net/packages/make.htm)) 
 
 ---
 
