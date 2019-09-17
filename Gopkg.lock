@@ -2,6 +2,20 @@
 
 
 [[projects]]
+  branch = "master"
+  digest = "1:7a17b8be33a46fd9a2f52c356589e43dd05f4ae0a4338f69a3b2340bf84826a6"
+  name = "github.com/claudioontheweb/gorm-rest-api"
+  packages = [
+    "author",
+    "config",
+    "db",
+    "http",
+    "router",
+  ]
+  pruneopts = "UT"
+  revision = "d8891d4dfd8c5013511e675a9284f73287eb5360"
+
+[[projects]]
   digest = "1:abeb38ade3f32a92943e5be54f55ed6d6e3b6602761d74b4aab4c9dd45c18abd"
   name = "github.com/fsnotify/fsnotify"
   packages = ["."]
@@ -173,6 +187,11 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/claudioontheweb/gorm-rest-api/author",
+    "github.com/claudioontheweb/gorm-rest-api/config",
+    "github.com/claudioontheweb/gorm-rest-api/db",
+    "github.com/claudioontheweb/gorm-rest-api/http",
+    "github.com/claudioontheweb/gorm-rest-api/router",
     "github.com/gorilla/mux",
     "github.com/jinzhu/gorm",
     "github.com/jinzhu/gorm/dialects/mysql",
