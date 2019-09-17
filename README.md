@@ -14,7 +14,7 @@ Example Architecture + Structure
 
 ## Run the proj
 
-1. Start Docker-Service DB: `docker-compose up`
+1. Start DB (Docker): `docker-compose up`
 2. Get Project's Dependencies: `dep ensure`
 3. Run Application: `go run cmd/main.go`
 
