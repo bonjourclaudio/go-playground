@@ -48,6 +48,12 @@ func main() {
 
 	// Setup DB
 	db.DB = db.ConnectDB()
+
+	if !db.DB.HasTable("authors") {
+		db.DB.Set("gorm:table_options", "ENGINE=InnoDB").CreateTable(&author.Author{})
+	}
+
+
 	defer db.DB.Close()
 
 	// HTTP Server

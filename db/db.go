@@ -24,7 +24,6 @@ func ConnectDB() *gorm.DB {
 	if dbError != nil {
 		panic("Failed to connect to database")
 	}
-
 	db.DB().SetMaxIdleConns(0)
 
 	return db
