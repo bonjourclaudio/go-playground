@@ -6,6 +6,14 @@ Example Architecture + Structure
 
 ---
 
+## Run the proj
+
+1. `docker-compose up`
+2. `go run cmd/main.go`
+
+
+---
+
 ## Structure / Architecture
 
 <pre>
