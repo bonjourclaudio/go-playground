@@ -1,5 +1,5 @@
 # Go Playground
-Simple REST API using Go Lang + Gorm + Mux
+Simple REST API + DB (Docker)
 
 
 Example Architecture + Structure
