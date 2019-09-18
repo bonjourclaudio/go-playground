@@ -51,10 +51,8 @@ func main() {
 
 	defer db.DB.Close()
 
-	// Create table
-	if !db.DB.HasTable("authors") {
-		db.DB.Set("gorm:table_options", "ENGINE=InnoDB").CreateTable(&author.Author{})
-	}
+	// Auto migrate Model
+	db.DB.AutoMigrate(&author.Author{})
 
 	// HTTP Server
 	log.Fatal(http.ListenAndServe(":" + port, router))
