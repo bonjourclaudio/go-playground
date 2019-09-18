@@ -105,7 +105,7 @@ Every domain should have it's own folder containing the following structure:
 -> [Repo](https://godoc.org/-/subrepo)
 ### HTTP / REST API / Web
 * [Mux](https://github.com/gorilla/mux)
-  * [REST API using Max](https://www.youtube.com/watch?v=SonwZ6MF5BE)
+  * [REST API using Mux](https://www.youtube.com/watch?v=SonwZ6MF5BE)
 * [Echo](https://github.com/labstack/echo)
 
 ### DB
