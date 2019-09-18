@@ -2,7 +2,7 @@
 "ENVIRONMENT": "Development",
 "PORT":8080,
 "DB_HOST":"127.0.0.1",
-"DB_NAME":"gormrestapi",
+"DB_NAME":"goplaygrounddb",
 "DB_USERNAME":"root",
 "DB_PASSWORD":"1234"
 }

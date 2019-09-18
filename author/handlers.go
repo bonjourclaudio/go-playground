@@ -2,8 +2,8 @@ package author
 
 import (
 	"encoding/json"
-	"github.com/claudioontheweb/gorm-rest-api/db"
-	customHTTP "github.com/claudioontheweb/gorm-rest-api/http"
+	"github.com/claudioontheweb/go-playground/db"
+	customHTTP "github.com/claudioontheweb/go-playground/http"
 	"github.com/gorilla/mux"
 	"net/http"
 )

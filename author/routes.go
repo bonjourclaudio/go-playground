@@ -1,6 +1,6 @@
 package author
 
-import "github.com/claudioontheweb/gorm-rest-api/router"
+import "github.com/claudioontheweb/go-playground/router"
 
 var Routes = router.RoutePrefix{
 	"/authors",

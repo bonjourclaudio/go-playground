@@ -4,7 +4,7 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_DATABASE: 'gormrestapi'
+      MYSQL_DATABASE: 'goplaygrounddb'
       MYSQL_USER: 'dev'
       MYSQL_PASSWORD: 'dev'
       MYSQL_ROOT_PASSWORD: '1234'

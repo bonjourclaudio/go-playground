@@ -1,20 +1,20 @@
 package main
 
 import (
-	"github.com/claudioontheweb/gorm-rest-api/author"
-	"github.com/claudioontheweb/gorm-rest-api/db"
+	"github.com/claudioontheweb/go-playground/author"
+	"github.com/claudioontheweb/go-playground/config"
+	"github.com/claudioontheweb/go-playground/db"
+	customRouter "github.com/claudioontheweb/go-playground/router"
 	"github.com/gorilla/mux"
 	"github.com/spf13/viper"
-	"net/http"
-	customRouter "github.com/claudioontheweb/gorm-rest-api/router"
 	"log"
-	"github.com/claudioontheweb/gorm-rest-api/config"
+	"net/http"
 )
 
 func NewRouter() *mux.Router {
 
 	// Init Router
-	router := mux.NewRouter()
+	r := mux.NewRouter()
 
 	// Append author routes
 	customRouter.AppRoutes = append(customRouter.AppRoutes, author.Routes)
@@ -22,7 +22,7 @@ func NewRouter() *mux.Router {
 	for _, route := range customRouter.AppRoutes {
 
 		// Create subroute
-		routePrefix := router.PathPrefix(route.Prefix).Subrouter()
+		routePrefix := r.PathPrefix(route.Prefix).Subrouter()
 
 		// Loop through each subroute
 
@@ -35,7 +35,7 @@ func NewRouter() *mux.Router {
 		}
 	}
 
-return router
+return r
 
 }
 
@@ -49,12 +49,12 @@ func main() {
 	// Setup DB
 	db.DB = db.ConnectDB()
 
+	defer db.DB.Close()
+
+	// Create table
 	if !db.DB.HasTable("authors") {
 		db.DB.Set("gorm:table_options", "ENGINE=InnoDB").CreateTable(&author.Author{})
 	}
-
-
-	defer db.DB.Close()
 
 	// HTTP Server
 	log.Fatal(http.ListenAndServe(":" + port, router))
