@@ -112,7 +112,8 @@ Every domain should have it's own folder containing the following structure:
 * [Gorm (ORM Library)](https://github.com/jinzhu/gorm)
 * [Goose (DB Migration tool)](https://github.com/steinbacher/goose)
 
-### Package Managers
+### Dpendency Managers
+* [Dep](https://github.com/golang/dep)
 * [Glide](https://github.com/Masterminds/glide)
 
 ### Logging / Error
