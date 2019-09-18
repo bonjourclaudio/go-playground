@@ -20,6 +20,7 @@ Example Architecture + Structure
 1. Start DB (Docker): `docker-compose up`
 2. Get Project's Dependencies: `dep ensure`
 3. Run Application: `go run cmd/main.go`
+4. Server listens on [localhost:8080](http://localhost:8080) (Specify port in config/config.json)
 
 ## Build the proj
 
