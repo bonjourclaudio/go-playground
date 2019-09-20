@@ -113,6 +113,7 @@ Every domain should have it's own folder containing the following structure:
 * [Goose (DB Migration tool)](https://github.com/steinbacher/goose)
 
 ### Package Managers
+* [Dep](https://github.com/golang/dep)
 * [Glide](https://github.com/Masterminds/glide)
 
 ### Logging / Error
