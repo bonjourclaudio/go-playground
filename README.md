@@ -89,9 +89,11 @@ Every domain should have it's own folder containing the following structure:
 * [Clean Architecture 2](https://hackernoon.com/golang-clean-archithecture-efd6d7c43047)
 * [Clean Architecture 3](https://geeks.uniplaces.com/putting-clean-architecture-into-practice-20c47d8c76de)
 * [Clean Architecture 4](https://medium.com/@matthieujacquot/clean-architecture-in-golang-7ebafe4c70db)
-* [Web Services Architecture](https://boobo94.xyz/web-service/webservice-architecture-golang/)
+* **[Web Services Architecture](https://boobo94.xyz/web-service/webservice-architecture-golang/)**
 * [Go and Package Focused Design Article](https://blog.gopheracademy.com/advent-2016/go-and-package-focused-design/)
 * [Structuring Go Apps](https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091#.kj6eym1u4)
+* [Pipeline Architecture](https://labs.bawi.io/building-a-pipeline-architecture-in-golang-4c154b8cdcff)
+* **[Clean Serverless](https://ewanvalentine.io/how-im-writing-serverless-services-in-golang-these-days/)**
 
 ### Go + DB
 * [MongoDB + Go Best Practices](https://www.nicolasmerouze.com/how-to-render-json-api-golang-mongodb/)
